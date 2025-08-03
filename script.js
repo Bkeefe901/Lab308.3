@@ -120,46 +120,46 @@ let cell4 = ``;
 
 for(let a = 0; a < 4; a++){
 
-for(let i = 0; i <= str3.length; i++){
-    if(str3[i] != `,`){
-    cell1 += str3[i];
-    } else{
-        break
+    for(let i = 0; i <= str3.length; i++){
+        if(str3[i] != `,`){
+        cell1 += str3[i];
+        } else{
+        break;
+        }
     }
-}
 
-for(let i = cell1.length + 1; i <= str3.length; i++){
-    if(str3[i] != `,`){
-    cell2 += str3[i];
-    } else{
-        break
-    }
-}
+    for(let i = cell1.length + 1; i <= str3.length; i++){
+        if(str3[i] != `,`){
+        cell2 += str3[i];
+        } else{
+        break;
+        }
+        }
 
-for(let i = cell1.length + cell2.length + 2; i <= str3.length; i++){
-    if(str3[i] != `,`){
-    cell3 += str3[i];
-    } else{
-        break
+    for(let i = cell1.length + cell2.length + 2; i <= str3.length; i++){
+        if(str3[i] != `,`){
+        cell3 += str3[i];
+        } else{
+        break;
+        }
     }
-}
 
 // // `\n` marks the end of a row therefore `\n` also marks the end of the 4th cell in a row
-for(let i = cell1.length + cell2.length + cell3.length + 3; i <= str3.length; i++){
-    if(str3[i] != `\n`){
-    cell4 += str3[i];
+    for(let i = cell1.length + cell2.length + cell3.length + 3; i <= str3.length; i++){
+        if(str3[i] != `\n`){
+        cell4 += str3[i];
     // // There will only be 4 cells per row, so after storing 4 cell variables we can console.log the four for that row then recycle the variables for the next row
-    } else{
+        } else{
         console.log(cell1, cell2, cell3, cell4);
-        str3 = str3.replace(str3.substring(0, i), "");
+        str3 = str3.replace(str3.substring(0, i + 1), "");
         cell1 = '';
         cell2 = '';
         cell3 = '';
         cell4 = '';
-        break
-    }
+        break;
+        }
 
-}
+    }
 
 }
 
