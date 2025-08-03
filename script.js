@@ -43,8 +43,8 @@ while(x <= 100){
 
 // Declare an arbitrary number, n.
 let n = 19;
-let b = 0;
 
+// Create a loop that searches for the next prime number, starting at n and incrementing from there.
 
 for(i = n + 1; i < 1000; i++){
     for(let a = 2; a < i; a++){
@@ -52,6 +52,7 @@ for(i = n + 1; i < 1000; i++){
             break;
         }
         else if(a == i -1){
+            // As soon as you find the prime number, log that number and exit the loop.
             console.log(`${i} is the next prime number after ${n}.`)
             i = 1001;
             break;
@@ -62,26 +63,7 @@ for(i = n + 1; i < 1000; i++){
 }
 
 
-// Create a loop that searches for the next prime number, starting at n and incrementing from there.
-// for(i = n + 1; i < 1000000; i++){
-//     for(let a = 2; a < i; a++){
-//         if(i % a == 0){
-//             b = 0;
-//             break;
-//         }
-//         else if(a < (i - 1)){
-//             b += 1;
-//         }
-//         else if(a == (i - 1) && b == (i - 3)){
-//             console.log(`${i} is the next prime number after ${n}.`)
-//             b = 0;
-//             break;
-//         }
-//     }
-    
-// }
 
-// As soon as you find the prime number, log that number and exit the loop.
 
 
 
